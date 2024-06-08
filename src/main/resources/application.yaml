@@ -1,12 +1,13 @@
 spring:
   application:
     name: resource-service
-server:
-  port: 8886
-  servlet:
-    context-path: resource-service
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/dev-realm
+          issuer-uri: http://localhost:9999/realms/dev-realm
+server:
+  port: 8886
+  servlet:
+    context-path: /resource-service
+
